@@ -16,6 +16,11 @@ with **zero setup on the server** and no .NET runtime on the client.
 
 ---
 
+<p align="center">
+  <img src="docs/screenshot-dashboard.png" alt="Farview dashboard in Windows Terminal: CPU graph, memory, disks and power panels" width="900">
+</p>
+<p align="center"><sub>The dashboard in Windows Terminal (<code>--demo</code> data).</sub></p>
+
 ## ✨ What it is
 
 Farview connects to any Linux box you can already `ssh` into, streams a tiny
@@ -29,7 +34,7 @@ terminal. One SSH connection, one frame per second, one ~2 MB native executable.
 - 🔁 **Auto-reconnect** — dropped link? The dashboard stays up and retries every 5 s
 - 🎭 **`--demo` mode** — fake data, no server needed, just to admire the UI
 
-Built on **[Cellray](../../CoreCLR)**, a terminal UI renderer — widgets like
+Built on **[Cellray](https://github.com/Aethertenshi-Playgrounds/Cellray)**, a terminal UI renderer — widgets like
 `Panel`, `Graph`, `Meter` and `Label` do all the drawing.
 
 ## 🚀 Quick start
@@ -43,6 +48,13 @@ farview                      # connect screen, last server prefilled
 farview root@192.168.1.10    # connect straight away ([user@]host[:port])
 farview --demo               # made-up data, no server needed
 ```
+
+Running `farview` with no arguments shows the connect screen, with your last server
+prefilled and the saved ones in a dropdown:
+
+<p align="center">
+  <img src="docs/screenshot-connect.png" alt="Farview connect screen with server text box, Connect button, saved servers dropdown and Forget button" width="700">
+</p>
 
 ### Requirements
 
